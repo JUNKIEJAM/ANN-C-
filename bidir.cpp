@@ -125,7 +125,8 @@ cout<<"Enter test vectors:\n";
 vector<int> testXY;
 for(int i=0; i<colIn; i++){
 
-    int t; cin>>t;
+int t; 
+cin>>t;
 testXY.push_back(t);
 }
 vector<int> testYX;
