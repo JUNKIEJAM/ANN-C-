@@ -32,6 +32,7 @@ cout<<"w1: "<<in[i].w1<<" || "<<"w2: "<<in[i].w2<<" || "<<"bias:
 "<<in[i].bias<<"\n";
 // calculate new weights
 int newW1, newW2, newBias;
+
 newW1 = in[i].w1 + in[i].x1 * in[i].correctOutput;
 newW2 = in[i].w2 + in[i].x2 * in[i].correctOutput;
 newBias = in[i].bias + in[i].correctOutput;
@@ -43,6 +44,7 @@ in[i].bias = newBias;
 cout<<"Updated Wts: \n";
 cout<<"w1: "<<in[i].w1<<" || "<<"w2: "<<in[i].w2<<"
 "<<in[i].bias<<"\n\n";
+
 // if last iter, update wts of 1st input
 if(i == in.size()-1){
 in[0].w1 = in[i].w1;
