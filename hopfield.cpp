@@ -2,8 +2,7 @@
 #include<vector>
 using namespace std;
 class hopfield{
-// hopfield is autoassociative net with no self loop, so calling autoassociative
-model to get wt matrix
+// hopfield is autoassociative net with no self loop, so calling autoassociative model to get wt matrix
 vector<vector<int>> autoAssociative(vector<int> input){
 vector<vector<int>> wt;
 // final wt matrix will be of n*n
@@ -35,8 +34,7 @@ for(int i=0; i<test.size(); i++) // converting bipolar vector to binary
 vector<int> y(test); // setting y = x
 for(int i=0; i<y.size(); i++){ // choosing Yi updating Y, 0<i<size
 int prod=0;
-for(int j=0; j<y.size(); j++) // Yi = Xi + Y*W_i, W_i: Ith column of
-wt matrix
+for(int j=0; j<y.size(); j++) // Yi = Xi + Y*W_i, W_i: Ith column of wt matrix
 prod += y[j]*wt[j][i];
 y[i] = test[i] + prod;
 (y[i]<0)?y[i]=0:y[i];
@@ -48,8 +46,7 @@ cout<<y[i]<<" ";
 cout<<"\n";
 for(int i=0; i<input.size(); i++) // converting bipolar vector to binary
 (input[i]<0)?input[i]=0:input[i];
-for(int i=0; i<y.size(); i++){ // checking if input = y, if yes then
-recognizes
+for(int i=0; i<y.size(); i++){ // checking if input = y, if yes then recognizes
 if(input[i] != y[i]){
 cout<<"Don't recognizes";
 return;
