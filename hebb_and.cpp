@@ -28,8 +28,8 @@ in[i].w2 = in[i-1].w2;
 in[i].bias = in[i-1].bias;
 }
 cout<<"Previous Wts: \n";
-cout<<"w1: "<<in[i].w1<<" || "<<"w2: "<<in[i].w2<<" || "<<"bias:
-"<<in[i].bias<<"\n";
+cout<<"w1: "<<in[i].w1<<" || "<<"w2: "<<in[i].w2<<" || "<<"bias:"<<in[i].bias<<"\n";
+
 // calculate new weights
 int newW1, newW2, newBias;
 
@@ -42,8 +42,7 @@ in[i].w1 = newW1;
 in[i].w2 = newW2;
 in[i].bias = newBias;
 cout<<"Updated Wts: \n";
-cout<<"w1: "<<in[i].w1<<" || "<<"w2: "<<in[i].w2<<"
-"<<in[i].bias<<"\n\n";
+cout<<"w1: "<<in[i].w1<<" || "<<"w2: "<<in[i].w2<<"||"<<in[i].bias<<"\n\n";
 
 // if last iter, update wts of 1st input
 if(i == in.size()-1){
@@ -53,7 +52,7 @@ in[0].bias = in[i].bias;
 }
 }
 }
-|| "<<"bias:
+
 int main(){
 vector<input> in;
 int t;
